@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "leo",
+    "password": "leo123"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "leo",
+    "password": "leo123"
+}
+###
+GET http://localhost:5000/api/auth
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTIyMWRmZDQwZDYyOTAzNDRiNjVlMWYiLCJpYXQiOjE2Mjk3OTcwNDF9.79cnaVXAxULLGwOegMT555ESDauUJjoEXCZD3MIiwrs
+
+{
+    "title": "Next.js",
+    "description": "abc",
+    "url": "google.com",
+    "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTIyMWRmZDQwZDYyOTAzNDRiNjVlMWYiLCJpYXQiOjE2Mjk2OTMwMDR9.mRvEc-pp9VYMOyjC1yJpL3HA4qI75qZPsw4kkth2Qo0
+
+###
+PUT http://localhost:5000/api/posts/61221e3a40d6290344b65e25
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTIyMWRmNjQwZDYyOTAzNDRiNjVlMWMiLCJpYXQiOjE2Mjk2OTI3NzN9.6R0nx4RAQ6jQOHJ9F6deFdY90n31NZQ92g2FFu7ZluI
+
+{
+    "title": "post of jim updated",
+    "description": "",
+    "url": "vuejs.org",
+    "status": ""
+}
+
+###
+DELETE http://localhost:5000/api/posts/61221e2140d6290344b65e22
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTIyMWRmZDQwZDYyOTAzNDRiNjVlMWYiLCJpYXQiOjE2Mjk2OTMwMDR9.mRvEc-pp9VYMOyjC1yJpL3HA4qI75qZPsw4kkth2Qo0
